@@ -171,7 +171,7 @@ Ringkasan penjualan, grafik pendapatan per judul, dan tabel rincian.
 
 Penjelasan sistematika, alur berpikir, dan argumentasi perancangan aplikasi (durasi kurang dari 8 menit):
 
-**[`[https://youtu.be/8kKYwSYKZXI]`]([https://youtube.com/](https://youtu.be/8kKYwSYKZXI))**
+**[`[([https://youtube.com/](https://youtu.be/8kKYwSYKZXI))**
 
 ## 9
 . Teknologi
