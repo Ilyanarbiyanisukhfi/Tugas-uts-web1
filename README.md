@@ -173,8 +173,7 @@ Penjelasan sistematika, alur berpikir, dan argumentasi perancangan aplikasi (dur
 
 **[`[([https://youtube.com/](https://youtu.be/8kKYwSYKZXI))**
 
-## 9
-. Teknologi
+## 9. Teknologi
 
 - HTML5
 - CSS3 (variabel CSS, Flexbox, Grid, media query, animasi)
