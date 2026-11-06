@@ -9,7 +9,7 @@ Aplikasi website toko buku online yang dibuat dengan **HTML, CSS, dan JavaScript
 | **Nama** | `[Ilyan Arbiyani Sukhfi]` |
 | **NIM** | `[312510536]` |
 | **Mata kuliah** | Pemrograman Web 1 |
-| **Video penjelasan (YouTube)** | [`[tempel link YouTube di sini]`](https://youtube.com/) |
+| **Video penjelasan (YouTube)** | [`[tempel link YouTube di sini]`]([https://youtube.com/](https://youtu.be/8kKYwSYKZXI)) |
 
 ---
 
@@ -171,7 +171,7 @@ Ringkasan penjualan, grafik pendapatan per judul, dan tabel rincian.
 
 Penjelasan sistematika, alur berpikir, dan argumentasi perancangan aplikasi (durasi kurang dari 8 menit):
 
-**[`[tempel link YouTube di sini]`](https://youtube.com/)**
+**[`[tempel link YouTube di sini]`]([https://youtube.com/](https://youtu.be/8kKYwSYKZXI))**
 
 ## 9
 . Teknologi
