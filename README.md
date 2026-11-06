@@ -9,7 +9,7 @@ Aplikasi website toko buku online yang dibuat dengan **HTML, CSS, dan JavaScript
 | **Nama** | `[Ilyan Arbiyani Sukhfi]` |
 | **NIM** | `[312510536]` |
 | **Mata kuliah** | Pemrograman Web 1 |
-| **Video penjelasan (YouTube)** | [([https://youtube.com/](https://youtu.be/8kKYwSYKZXI) |
+| **Video penjelasan (YouTube)** | [([https://youtube.com/](https://youtu.be/8kKYwSYKZXI)) |
 
 ---
 
