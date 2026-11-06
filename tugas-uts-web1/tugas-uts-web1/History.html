@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Riwayat transaksi pemesanan">
+<title>History Transaksi | Pustaka Terbuka</title>
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&amp;family=Sora:wght@600;700&amp;display=swap" rel="stylesheet">
+<script>try{var t=localStorage.getItem("ut_tema");if(!t&&matchMedia("(prefers-color-scheme: dark)").matches)t="dark";if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="history">
+<header class="header-situs">
+  <div class="header-isi">
+    <a class="merek-kecil" href="dashboard.html"><img src="assets/logo.svg" alt="" width="30" height="30">Pustaka Terbuka</a>
+    <nav class="nav-utama" aria-label="Menu utama">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="stok.html">Katalog</a>
+      <a href="checkout.html">Pemesanan</a>
+      <a href="tracking.html">Tracking</a>
+      <a data-admin href="laporan.html">Laporan</a>
+      <a href="history.html" aria-current="page">Riwayat</a>
+    </nav>
+    <div class="pengguna"><button type="button" class="tema-toggle" id="btnTema" aria-label="Ganti mode tampilan"><span class="ikon" aria-hidden="true"></span><span class="teks"></span></button><span id="namaPengguna"></span><button type="button" class="btn" id="btnLogout">Keluar</button></div>
+  </div>
+</header>
+<main class="konten">
+  <div class="judul-halaman"><h1>History Transaksi</h1><p>Seluruh pesanan yang pernah dibuat.</p></div>
+  <div class="bar-alat" style="margin-top:0">
+    <label class="sr-only" for="cariHistory">Cari transaksi</label><input type="search" id="cariHistory" placeholder="Cari nomor DO atau nama&hellip;">
+    <label class="sr-only" for="filterStatus">Filter status</label>
+    <select id="filterStatus" class="select-polos"><option value="">Semua status</option><option>Diproses</option><option>Dikirim</option><option>Dalam Perjalanan</option><option>Selesai</option></select>
+  </div>
+  <div class="tabel-bungkus"><table>
+    <thead><tr><th scope="col">No. DO</th><th scope="col">Tanggal</th><th scope="col">Pemesan</th><th scope="col" class="angka">Item</th><th scope="col" class="angka">Total</th><th scope="col">Pembayaran</th><th scope="col">Status</th><th scope="col"><span class="sr-only">Aksi</span></th></tr></thead>
+    <tbody id="tbodyHistory"></tbody></table><p class="kosong" id="historyKosong" hidden>Tidak ada transaksi.</p></div>
+</main>
+<dialog id="dlgDetail" class="lebar" aria-labelledby="detailJudul">
+  <div class="dlg-kepala"><h2 id="detailJudul"></h2><button type="button" class="dlg-tutup" data-tutup aria-label="Tutup">&times;</button></div>
+  <div class="dlg-badan" id="detailIsi"></div>
+  <div class="dlg-kaki"><button type="button" class="btn btn-ghost" data-tutup>Tutup</button><a class="btn btn-accent" id="linkLacakDetail" href="tracking.html">Lacak paket</a></div>
+</dialog>
+<footer class="footer-situs"><p>&copy; 2026 Pustaka Terbuka &ndash; Tugas UTS Pemrograman Web 1</p></footer>
+<script src="js/data.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

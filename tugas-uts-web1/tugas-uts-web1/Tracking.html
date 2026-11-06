@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Lacak pengiriman buku">
+<title>Tracking Pengiriman | Pustaka Terbuka</title>
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&amp;family=Sora:wght@600;700&amp;display=swap" rel="stylesheet">
+<script>try{var t=localStorage.getItem("ut_tema");if(!t&&matchMedia("(prefers-color-scheme: dark)").matches)t="dark";if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="tracking">
+<header class="header-situs">
+  <div class="header-isi">
+    <a class="merek-kecil" href="dashboard.html"><img src="assets/logo.svg" alt="" width="30" height="30">Pustaka Terbuka</a>
+    <nav class="nav-utama" aria-label="Menu utama">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="stok.html">Katalog</a>
+      <a href="checkout.html">Pemesanan</a>
+      <a href="tracking.html" aria-current="page">Tracking</a>
+      <a data-admin href="laporan.html">Laporan</a>
+      <a href="history.html">Riwayat</a>
+    </nav>
+    <div class="pengguna"><button type="button" class="tema-toggle" id="btnTema" aria-label="Ganti mode tampilan"><span class="ikon" aria-hidden="true"></span><span class="teks"></span></button><span id="namaPengguna"></span><button type="button" class="btn" id="btnLogout">Keluar</button></div>
+  </div>
+</header>
+<main class="konten">
+  <div class="judul-halaman"><h1>Informasi Pengiriman</h1><p>Masukkan Nomor Delivery Order. Contoh: <button type="button" class="tautan-tombol contoh-do">20230012</button>, <button type="button" class="tautan-tombol contoh-do">20230013</button>, <button type="button" class="tautan-tombol contoh-do">20230015</button></p></div>
+  <section class="card" aria-label="Pencarian">
+    <form id="formCari" class="form-cari" novalidate>
+      <div class="field"><label for="nomorDO">Nomor Delivery Order</label><input type="text" id="nomorDO" inputmode="numeric" placeholder="mis. 20230012"><span class="pesan-error" aria-live="polite"></span></div>
+      <button type="submit" class="btn btn-accent" style="margin-top:1.6rem">Cari</button>
+    </form>
+  </section>
+  <div class="hasil-tracking" id="hasilTracking" aria-live="polite"></div>
+</main>
+<footer class="footer-situs"><p>&copy; 2026 Pustaka Terbuka &ndash; Tugas UTS Pemrograman Web 1</p></footer>
+<script src="js/data.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

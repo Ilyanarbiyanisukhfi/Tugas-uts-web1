@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Katalog dan stok buku">
+<title>Informasi Stok | Pustaka Terbuka</title>
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&amp;family=Sora:wght@600;700&amp;display=swap" rel="stylesheet">
+<script>try{var t=localStorage.getItem("ut_tema");if(!t&&matchMedia("(prefers-color-scheme: dark)").matches)t="dark";if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="stok">
+<header class="header-situs">
+  <div class="header-isi">
+    <a class="merek-kecil" href="dashboard.html"><img src="assets/logo.svg" alt="" width="30" height="30">Pustaka Terbuka</a>
+    <nav class="nav-utama" aria-label="Menu utama">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="stok.html" aria-current="page">Katalog</a>
+      <a href="checkout.html">Pemesanan</a>
+      <a href="tracking.html">Tracking</a>
+      <a data-admin href="laporan.html">Laporan</a>
+      <a href="history.html">Riwayat</a>
+    </nav>
+    <div class="pengguna"><button type="button" class="tema-toggle" id="btnTema" aria-label="Ganti mode tampilan"><span class="ikon" aria-hidden="true"></span><span class="teks"></span></button><span id="namaPengguna"></span><button type="button" class="btn" id="btnLogout">Keluar</button></div>
+  </div>
+</header>
+<main class="konten">
+  <div class="judul-halaman"><h1>Informasi Stok / Katalog</h1><p>Data berasal dari <code>dataKatalogBuku</code> pada <code>js/data.js</code>.</p></div>
+  <section class="stat-baris" aria-label="Ringkasan stok">
+    <div class="stat"><span class="angka-besar" id="statJudul">0</span><span class="label">Judul buku</span></div>
+    <div class="stat"><span class="angka-besar" id="statStok">0</span><span class="label">Total eksemplar</span></div>
+    <div class="stat"><span class="angka-besar" id="statNilai">0</span><span class="label">Nilai persediaan</span></div>
+  </section>
+
+  <details class="card form-tambah">
+    <summary>Tambah stok baru</summary>
+    <form id="formStok" novalidate>
+      <div class="field-row">
+        <div class="field"><label for="kode">Kode barang</label><input type="text" id="kode" name="kode" placeholder="EKMA4101" maxlength="8"><span class="pesan-error" aria-live="polite"></span></div>
+        <div class="field"><label for="nama">Nama barang</label><input type="text" id="nama" name="nama" ><span class="pesan-error" aria-live="polite"></span></div>
+      </div>
+      <div class="field-row">
+        <div class="field"><label for="jenis">Jenis</label><select id="jenis"><option>Buku Ajar</option><option>Modul</option><option>Buku Referensi</option></select><span class="pesan-error"></span></div>
+        <div class="field"><label for="edisi">Edisi</label><input type="number" id="edisi" name="edisi" min="1" max="99"><span class="pesan-error" aria-live="polite"></span></div>
+        <div class="field"><label for="stok">Stok</label><input type="number" id="stok" name="stok" min="0"><span class="pesan-error" aria-live="polite"></span></div>
+        <div class="field"><label for="harga">Harga (Rp)</label><input type="number" id="harga" name="harga" min="1" placeholder="150000"><span class="pesan-error" aria-live="polite"></span></div>
+      </div>
+      <div class="field"><label for="cover">Cover</label><select id="cover"><option value="">Tanpa cover</option></select><span class="pesan-error"></span></div>
+      <button type="submit" class="btn btn-accent">Tambahkan</button>
+    </form>
+  </details>
+
+  <div class="bar-alat">
+    <label class="sr-only" for="cariStok">Cari buku</label>
+    <input type="search" id="cariStok" placeholder="Cari kode atau nama buku&hellip;">
+    <button type="button" class="btn btn-ghost btn-sm" id="btnReset">Reset ke data awal</button>
+  </div>
+  <div class="tabel-bungkus"><table>
+    <caption class="sr-only">Daftar stok buku</caption>
+    <thead><tr><th scope="col">Cover</th><th scope="col">Kode</th><th scope="col">Nama barang</th><th scope="col">Jenis</th><th scope="col">Edisi</th><th scope="col" class="angka">Stok</th><th scope="col" class="angka">Harga</th><th scope="col">Status</th><th scope="col">Aksi</th></tr></thead>
+    <tbody id="tbodyStok"></tbody></table>
+    <p class="kosong" id="stokKosong" hidden>Tidak ada buku yang cocok.</p></div>
+</main>
+<footer class="footer-situs"><p>&copy; 2026 Pustaka Terbuka &ndash; Tugas UTS Pemrograman Web 1</p></footer>
+<script src="js/data.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

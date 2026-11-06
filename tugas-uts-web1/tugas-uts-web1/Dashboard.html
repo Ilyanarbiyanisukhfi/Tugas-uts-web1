@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Menu utama toko buku online">
+<title>Dashboard | Pustaka Terbuka</title>
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&amp;family=Sora:wght@600;700&amp;display=swap" rel="stylesheet">
+<script>try{var t=localStorage.getItem("ut_tema");if(!t&&matchMedia("(prefers-color-scheme: dark)").matches)t="dark";if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="dashboard">
+<header class="header-situs">
+  <div class="header-isi">
+    <a class="merek-kecil" href="dashboard.html"><img src="assets/logo.svg" alt="" width="30" height="30">Pustaka Terbuka</a>
+    <nav class="nav-utama" aria-label="Menu utama">
+      <a href="dashboard.html" aria-current="page">Dashboard</a>
+      <a href="stok.html">Katalog</a>
+      <a href="checkout.html">Pemesanan</a>
+      <a href="tracking.html">Tracking</a>
+      <a data-admin href="laporan.html">Laporan</a>
+      <a href="history.html">Riwayat</a>
+    </nav>
+    <div class="pengguna"><button type="button" class="tema-toggle" id="btnTema" aria-label="Ganti mode tampilan"><span class="ikon" aria-hidden="true"></span><span class="teks"></span></button><span id="namaPengguna"></span><button type="button" class="btn" id="btnLogout">Keluar</button></div>
+  </div>
+</header>
+<main class="konten">
+  <section class="sapaan" aria-label="Sapaan">
+<div class="hiasan" aria-hidden="true"><span class="bulat b1"></span><span class="bulat b2"></span><span class="cincin b3"></span><span class="cincin b4"></span>
+<svg class="s1" viewBox="0 0 24 24"><path d="M12 1l3 8 8 3-8 3-3 8-3-8-8-3 8-3z"/></svg><svg class="s2" viewBox="0 0 24 24"><path d="M12 1l3 8 8 3-8 3-3 8-3-8-8-3 8-3z"/></svg><svg class="s3" viewBox="0 0 24 24"><path d="M12 1l3 8 8 3-8 3-3 8-3-8-8-3 8-3z"/></svg>
+<span class="buku-mini"></span><span class="buku-mini m2"></span></div>
+    <div><h1 id="salam">Selamat datang!</h1><p>Pilih menu di bawah untuk mulai bekerja.</p></div>
+  </section>
+  <nav class="menu-grid" aria-label="Menu dashboard">
+    <a class="menu-kartu" href="stok.html"><span class="ikon-menu" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5"/></svg></span><h2>Informasi Stok / Katalog</h2><span class="ringkas" id="ringkasKatalog">&hellip;</span><span class="aksi">Buka katalog</span></a>
+    <a class="menu-kartu" href="tracking.html"><span class="ikon-menu" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 7h11v9H3z"/><path d="M14 10h4l3 3v3h-7"/><circle cx="7" cy="18" r="1.6"/><circle cx="17" cy="18" r="1.6"/></svg></span><h2>Tracking Pengiriman</h2><span class="ringkas" id="ringkasTracking">&hellip;</span><span class="aksi">Lacak paket</span></a>
+    <a data-admin class="menu-kartu" href="laporan.html"><span class="ikon-menu" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg></span><h2>Laporan Pemesanan</h2><span class="ringkas" id="ringkasLaporan">&hellip;</span><span class="aksi">Lihat laporan</span></a>
+    <a class="menu-kartu" href="history.html"><span class="ikon-menu" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><h2>History Transaksi</h2><span class="ringkas" id="ringkasHistory">&hellip;</span><span class="aksi">Lihat riwayat</span></a>
+  </nav>
+  <div class="aksi-cepat"><a class="btn btn-accent" href="checkout.html">Buat pemesanan baru</a></div>
+</main>
+<footer class="footer-situs"><p>&copy; 2026 Pustaka Terbuka &ndash; Tugas UTS Pemrograman Web 1</p></footer>
+<script src="js/data.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

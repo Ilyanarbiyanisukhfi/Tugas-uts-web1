@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Laporan pemesanan buku">
+<title>Laporan Pemesanan | Pustaka Terbuka</title>
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&amp;family=Sora:wght@600;700&amp;display=swap" rel="stylesheet">
+<script>try{var t=localStorage.getItem("ut_tema");if(!t&&matchMedia("(prefers-color-scheme: dark)").matches)t="dark";if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="laporan">
+<header class="header-situs">
+  <div class="header-isi">
+    <a class="merek-kecil" href="dashboard.html"><img src="assets/logo.svg" alt="" width="30" height="30">Pustaka Terbuka</a>
+    <nav class="nav-utama" aria-label="Menu utama">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="stok.html">Katalog</a>
+      <a href="checkout.html">Pemesanan</a>
+      <a href="tracking.html">Tracking</a>
+      <a data-admin href="laporan.html" aria-current="page">Laporan</a>
+      <a href="history.html">Riwayat</a>
+    </nav>
+    <div class="pengguna"><button type="button" class="tema-toggle" id="btnTema" aria-label="Ganti mode tampilan"><span class="ikon" aria-hidden="true"></span><span class="teks"></span></button><span id="namaPengguna"></span><button type="button" class="btn" id="btnLogout">Keluar</button></div>
+  </div>
+</header>
+<main class="konten">
+  <div class="judul-halaman"><h1>Laporan Pemesanan</h1><p id="lapCakupan"></p></div>
+  <section class="stat-baris" aria-label="Ringkasan">
+    <div class="stat"><span class="angka-besar" id="lapPesanan">0</span><span class="label">Jumlah pesanan</span></div>
+    <div class="stat"><span class="angka-besar" id="lapTerjual">0</span><span class="label">Buku terjual</span></div>
+    <div class="stat"><span class="angka-besar" id="lapOmzet">Rp 0</span><span class="label">Total pendapatan</span></div>
+    <div class="stat"><span class="angka-besar" id="lapRata">Rp 0</span><span class="label">Rata-rata per pesanan</span></div>
+  </section>
+  <section class="card" aria-labelledby="hGrafik"><h2 id="hGrafik">Pendapatan per judul</h2><div class="grafik" id="grafik"></div></section>
+  <div class="bar-alat"><h2 style="margin:0">Rincian penjualan</h2><button type="button" class="btn btn-ghost btn-sm" id="btnCetak">Cetak laporan</button></div>
+  <div class="tabel-bungkus"><table><thead><tr><th scope="col">Kode</th><th scope="col">Judul</th><th scope="col" class="angka">Terjual</th><th scope="col" class="angka">Pendapatan</th></tr></thead><tbody id="tbodyLaporan"></tbody></table></div>
+</main>
+<footer class="footer-situs"><p>&copy; 2026 Pustaka Terbuka &ndash; Tugas UTS Pemrograman Web 1</p></footer>
+<script src="js/data.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

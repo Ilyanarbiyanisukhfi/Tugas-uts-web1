@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Masuk ke toko buku online Pustaka Terbuka">
+<title>Login | Pustaka Terbuka</title>
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&amp;family=Sora:wght@600;700&amp;display=swap" rel="stylesheet">
+<script>try{var t=localStorage.getItem("ut_tema");if(!t&&matchMedia("(prefers-color-scheme: dark)").matches)t="dark";if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="login">
+<button type="button" class="tema-toggle tema-melayang" id="btnTema" aria-label="Ganti mode tampilan"><span class="ikon" aria-hidden="true"></span><span class="teks"></span></button>
+<div class="login-halaman">
+  <section class="panel-katalog" aria-label="Katalog buku pilihan">
+<div class="hiasan" aria-hidden="true"><span class="bulat b1"></span><span class="bulat b2"></span><span class="cincin b3"></span><span class="cincin b4"></span>
+<svg class="s1" viewBox="0 0 24 24"><path d="M12 1l3 8 8 3-8 3-3 8-3-8-8-3 8-3z"/></svg><svg class="s2" viewBox="0 0 24 24"><path d="M12 1l3 8 8 3-8 3-3 8-3-8-8-3 8-3z"/></svg><svg class="s3" viewBox="0 0 24 24"><path d="M12 1l3 8 8 3-8 3-3 8-3-8-8-3 8-3z"/></svg>
+<span class="buku-mini"></span><span class="buku-mini m2"></span></div>
+    <div class="merek"><img src="assets/logo.svg" alt="" width="38" height="38">Pustaka Terbuka</div>
+    <p class="tagline">Geser untuk melihat buku ajar yang tersedia di toko kami.</p>
+    <div class="carousel" role="region" aria-roledescription="carousel" aria-label="Sampul buku">
+      <ul class="carousel-track" id="carouselTrack" tabindex="0" aria-label="Daftar sampul buku, geser kiri atau kanan"></ul>
+      <div class="carousel-info" aria-live="polite"><h2 id="infoJudul"></h2><p id="infoDetail"></p></div>
+      <div class="carousel-kontrol">
+        <button type="button" class="panah" id="panahKiri" aria-label="Buku sebelumnya">&#8249;</button>
+        <div class="titik-wadah" id="carouselTitik"></div>
+        <button type="button" class="panah" id="panahKanan" aria-label="Buku berikutnya">&#8250;</button>
+      </div>
+    </div>
+  </section>
+
+  <main class="panel-form">
+    <div class="form-login">
+      <h1>Masuk</h1>
+      <p class="sub">Login untuk mengelola stok, pemesanan, dan pengiriman buku.</p>
+      <form id="formLogin" novalidate>
+        <div class="field"><label for="email">Email</label><input type="email" id="email" name="email" autocomplete="email" placeholder="nama@gmail.com"><span class="pesan-error" aria-live="polite"></span></div>
+        <div class="field"><label for="password">Password</label>
+          <div class="pw-wadah"><input type="password" id="password" name="password" autocomplete="current-password"><button type="button" class="pw-toggle">Lihat</button></div>
+          <span class="pesan-error" aria-live="polite"></span></div>
+        <button type="submit" class="btn btn-accent btn-block">Login</button>
+      </form>
+      <div class="baris-tautan">
+        <button type="button" class="tautan-tombol" data-buka="dlgLupa">Lupa Password</button>
+        <button type="button" class="tautan-tombol" data-buka="dlgDaftar">Daftar</button>
+      </div>
+    </div>
+  </main>
+</div>
+
+<dialog id="dlgLupa" aria-labelledby="jLupa">
+  <div class="dlg-kepala"><h2 id="jLupa">Lupa Password</h2><button type="button" class="dlg-tutup" data-tutup aria-label="Tutup">&times;</button></div>
+  <form id="formLupa" novalidate><div class="dlg-badan"><p class="muted">Masukkan email terdaftar, kami kirimkan tautan untuk mengatur ulang password.</p>
+    <div class="field"><label for="emailLupa">Email</label><input type="email" id="emailLupa" name="emailLupa" ><span class="pesan-error" aria-live="polite"></span></div></div>
+    <div class="dlg-kaki"><button type="button" class="btn btn-ghost" data-tutup>Batal</button><button type="submit" class="btn btn-accent">Kirim tautan</button></div></form>
+</dialog>
+
+<dialog id="dlgDaftar" aria-labelledby="jDaftar">
+  <div class="dlg-kepala"><h2 id="jDaftar">Daftar Akun Baru</h2><button type="button" class="dlg-tutup" data-tutup aria-label="Tutup">&times;</button></div>
+  <form id="formDaftar" novalidate><div class="dlg-badan">
+    <div class="field"><label for="namaDaftar">Nama lengkap</label><input type="text" id="namaDaftar" name="namaDaftar" autocomplete="name"><span class="pesan-error" aria-live="polite"></span></div>
+    <div class="field"><label for="emailDaftar">Email</label><input type="email" id="emailDaftar" name="emailDaftar" autocomplete="email"><span class="pesan-error" aria-live="polite"></span></div>
+    <div class="field"><label for="pwDaftar">Password (min. 6 karakter)</label><input type="password" id="pwDaftar" name="pwDaftar" autocomplete="new-password"><span class="pesan-error" aria-live="polite"></span></div>
+    <div class="field"><label for="pwDaftar2">Ulangi password</label><input type="password" id="pwDaftar2" name="pwDaftar2" autocomplete="new-password"><span class="pesan-error" aria-live="polite"></span></div></div>
+    <div class="dlg-kaki"><button type="button" class="btn btn-ghost" data-tutup>Batal</button><button type="submit" class="btn btn-accent">Daftar</button></div></form>
+</dialog>
+<script src="js/data.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
